@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #fff;
+  text-align: center;
+}
+
+.app {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.5);
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  color: #00ffff;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px cyan;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+#stopwatch, #timer, #alarms {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+/* Dynamic Island */
+#dynamic-island {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  padding: 15px 30px;
+  color: #00ffff;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: pulse 1s infinite alternate;
+}
+
+#dynamic-island.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 0 10px rgba(0,255,255,0.3); }
+  to   { box-shadow: 0 0 25px rgba(0,255,255,0.7); }
+}
+
+#island-icon {
+  font-size: 24px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.alarm-icon { color: #ff4444; }
+.timer-icon { color: #ffaa00; }
+.stopwatch-icon { color: #44ff44; }
